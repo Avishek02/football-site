@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/* -----------------
+      Common styles or utilities 
+------------------*/
+i {
+  font-size: 1.5rem;
+}
+
+/* -----------------
+      Header section 
+------------------*/
+
+@keyframes sizing {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes coloring {
+  from {
+    color: #e02c6d;
+  }
+  to {
+    color: #ffffff;
+  }
+}
+.header-section {
+  background-color: #271f99;
+  display: flex;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.intro {
+  padding: 100px;
+}
+
+.half-width h1,
+a {
+  color: #ffffff;
+}
+
+.half-width h1 {
+  /* width: 485px;
+  height: 230px; */
+  width: 60%;
+  font: normal bold 64px/80px Poppins;
+}
+
+.intro .button {
+  background: #e02c6d;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.half-width .button a {
+  font: normal 20px/0px Poppins;
+  text-decoration: none;
+}
+
+.half-width img {
+  width: 60%;
+  padding: 65px;
+  margin-top: 60px;
+}
+
+.header-section:hover .half-width img {
+  animation: sizing 1s ease-in-out 0.3s infinite alternate;
+}
+
+.header-section:hover .intro .button {
+  animation: coloring 1s ease-in-out 0.3s infinite alternate;
+}
+
+/* --------------
+          Top blogs Section
+------------------- */
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-blogs {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 27px;
+  grid-column-gap: 30px;
+  position: relative;
+}
+
+.blog {
+  width: 330px;
+  height: 474px;
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 10px 10px 40px grey;
+  overflow: hidden;
+}
+
+.blog .thumbnail img {
+  width: 300px;
+  height: 256px;
+  margin-left: 15px;
+}
+
+.blog:hover .thumbnail img {
+  transform: scale(1.2);
+  transition: transform 1.5s ease-in-out;
+}
+
+.blog-info {
+  width: 300px;
+  height: 124px;
+  margin-left: 15px;
+}
+
+.blog-info .player-name {
+  font: normal bold 28px/40px Poppins;
+}
+
+.blog-info .player-info {
+  font: normal normal 16px/26px Poppins;
+}
+
+/* ---------Table
+------------------- */
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+#table-title {
+  text-align: center;
+}
+table th,
+td {
+  border: 2px solid lightslategray;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+
+table th {
+  background-color: palevioletred;
+}
+
+table td {
+  background-color: powderblue;
+}
+
+/* -------------
+         Form Section
+------------------- */
+
+.form-section {
+  position: relative;
+  left: 350px;
+  margin-bottom: 70px;
+}
+
+.form-section h1 {
+  margin-bottom: 10px;
+}
+
+.form-section input,
+textarea {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 5px 0;
+}
+
+.form-section textarea {
+  width: 34%;
+  height: 150px;
+}
+
+.form-section button {
+  background: #e02c6d;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* ---------Footer Section
+------------------- */
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section .logo {
+  position: relative;
+  margin: 20px 0;
+  left: 100px;
+}
+
+.footer-section .logo img {
+  width: 60%;
+}
+
+.footer-section .social-icons i {
+  margin-right: 14px;
+}
+
+.footer-section .copyright p {
+  font: normal normal 18px/24px Poppins;
+  color: #000000;
+}
+
+/* -------------
+      Media  Queries
+------------------- */
+
+/* --- Mobile devices(less than 688px) --*/
+@media only screen and (max-width: 688px) {
+  .header-section,
+  .top-blogs,
+  .footer-section {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-section .banner {
+    width: 85%;
+  }
+
+  .half-width h1 {
+    font: normal bold 40px/46px Poppins;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    position: relative;
+    left: 0px;
+  }
+
+  .form-section input,
+  textarea {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 5px 0;
+  }
+
+.form-section textarea {
+  width: 80%;
+  height: 150px;
+}
+
+  .footer-section .logo img {
+    width: 60%;
+  }
+
+  .footer-section .logo {
+    left: 50px;
+  }
+}
+
+/* --- Tablet devices(min 688px and max 992) --*/
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .header-section,
+  .top-blogs,
+  .footer-section {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-section {
+  position: relative;
+  left: 200px;
+}
